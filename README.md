@@ -214,4 +214,8 @@ Test your app by opening a browser to your instance public DNS name:8080
 
 
 
-
+aws-minicapstone-week2-Kubernetes# eventsappstart
+This is a simple events app
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTA4MzQ0NDc4M119
+-->
