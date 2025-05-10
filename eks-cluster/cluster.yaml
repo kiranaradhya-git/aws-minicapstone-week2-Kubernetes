@@ -4,7 +4,7 @@ kind: ClusterConfig
 metadata:
   name: KM Capstone
   region: us-east-1
-  version: "1.28"
+  version: "1.32"
 
 kubernetesNetworkConfig: 
   serviceIPv4CIDR: 10.100.0.0/16
@@ -40,10 +40,10 @@ addons:
  
 managedNodeGroups:
   - name: nodegroup-1
-    instanceType: t2.medium
-    minSize: 2
-    desiredCapacity: 2
-    maxSize: 4
+    instanceType: t3.medium
+    minSize: 3
+    desiredCapacity: 3
+    maxSize: 3
     volumeEncrypted: true
     privateNetworking: true
     iam:
