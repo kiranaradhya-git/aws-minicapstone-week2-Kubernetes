@@ -227,12 +227,11 @@ aws ecr get-login-password | docker login --username AWS --password-stdin $Web_E
 ```
 
 ```
-docker build -t capstone-ap
+docker build -t capstone-eventweb
 
 ```
-```
-eventswb .0
-```**13.4  Run and Test the docker images the Website from the RegistrLocally**
+
+**13.4  Run and Test the docker images the Website from the RegistrLocally**
 
 To run events-api:
 ```
