@@ -292,7 +292,8 @@ docker push $Web_ECR_URI:latest
 ```
 
 **Use commands to help you stop any containers**
-***List all Docker processes ***
+
+***List all Docker processes***
 ```
 docker ps -a
 ```
