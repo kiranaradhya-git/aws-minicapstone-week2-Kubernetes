@@ -69,7 +69,9 @@ should see the docker help options on the screen.
 sudo systemctl enable docker
 ```
 **start the service**
-sudo systemctl start docker 
+```
+sudo systemctl start docker
+```
 
 ### 1.4 To install Git:
 ```
