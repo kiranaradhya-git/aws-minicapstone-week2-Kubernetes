@@ -125,7 +125,7 @@ ls
 
 ***2.3.1.1 Create Dockerfile***
 
-cd ~/aws-minicapstone-week2-Kubernetes/events-website/
+cd ~/aws-minicapstone-week2-Kubernetes/events-websiteapi/
 vi .Dockerfile
 
 Paste the below contents and save the file 
@@ -239,3 +239,14 @@ Once the cluster is created, click refresh in the Amazon EKS console
 From the AWS console:
 Select EC2 from the console, then Instances (running)
 ![image](https://github.com/user-attachments/assets/47fcf386-a2f8-4105-be71-e65e31c4497d)
+
+
+
+
+
+
+aws-minicapstone-week2-Kubernetes# eventsappstart
+This is a simple events app
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE2MTQxNzg0ODRdfQ==
+-->
