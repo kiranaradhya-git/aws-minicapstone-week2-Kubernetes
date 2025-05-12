@@ -125,7 +125,7 @@ ls
 
 ***2.3.1.1 Create Dockerfile***
 
-cd ~/aws-minicapstone-week2-Kubernetes/events-api/
+cd ~/aws-minicapstone-week2-Kubernetes/events-website/
 vi .Dockerfile
 
 Paste the below contents and save the file 
@@ -207,15 +207,35 @@ Test your app by opening a browser to your instance public DNS name:8080
 
 ---
 
+## 3. Deploy an EKS cluster
+
+### 3.1 Run the following to create a Kubernetes cluster:
+
+```
+cd ~/aws-minicapstone-week2-Kubernetes/eks-cluster 
+```
+```
+eksctl create cluster -f cluster.yaml
+```
+When done, you can verify your cluster with: 
+
+```
+kubectl get nodes
+```
+![image](https://github.com/user-attachments/assets/fa3dbea8-afd0-42ef-8041-8ca28b159ffc)
 
 
+To List all the cluster services 
+```
+kubectl get svc --all-namespaces
+```
+![image](https://github.com/user-attachments/assets/85f4d301-ab9d-44e1-9943-f44a0dc47de2)
 
+Viewing Cluster and Node Information from AWS Console
 
+Once the cluster is created, click refresh in the Amazon EKS console
+![image](https://github.com/user-attachments/assets/a82839a7-a917-47e9-b9a8-c31a241271e7)
 
-
-
-aws-minicapstone-week2-Kubernetes# eventsappstart
-This is a simple events app
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MzQ0NDc4M119
--->
+From the AWS console:
+Select EC2 from the console, then Instances (running)
+![image](https://github.com/user-attachments/assets/47fcf386-a2f8-4105-be71-e65e31c4497d)
