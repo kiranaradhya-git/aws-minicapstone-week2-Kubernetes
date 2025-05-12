@@ -128,7 +128,8 @@ ls
 
 ```
 cd ~/aws-minicapstone-week2-Kubernetes/events-api/
-vi .docker```file
+vi .dockerignore
+```
 
 Paste the below contents and save the file 
 ```
