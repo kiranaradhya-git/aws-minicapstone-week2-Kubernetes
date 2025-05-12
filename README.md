@@ -290,6 +290,20 @@ docker tag events-api:latest $Web_ECR_URI
 ```
 docker push $Web_ECR_URI:latest
 ```
+
+**Use commands to help you stop any containers**
+***List all Docker processes ***
+```
+docker ps -a
+```
+
+***Stop and remove all Docker processes***
+```
+docker stop <container_id>
+```
+```
+docker rm <container_id>
+```
 ## 3. Deploy an EKS cluster
 
 ### 3.1 Run the following to create a Kubernetes cluster:
