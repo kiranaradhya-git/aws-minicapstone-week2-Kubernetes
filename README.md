@@ -273,10 +273,13 @@ docker build -t capstone-eventweb .
 docker tag capstone-eventweb:latest $Web_ECR_URI:2.0
 
 ```
+![image](https://github.com/user-attachments/assets/b8ccbc34-a42b-47d0-b9ea-329cd0d58de1)
 
 ```
 docker push $Web_ECR_URI:2.0
 ```
+You should be able to see the repositories and the images in the image repository.
+
 ```
 docker ps -a
 ```
@@ -293,7 +296,7 @@ docker run -d -p 8080:8080 -e SERVER='http://localhost:8082' --network="host" $W
 
 ![image](https://github.com/user-attachments/assets/fa628475-220d-4e46-b932-7a49e04ccfed)
 
-
+You should be able to create a new version of your application using Docker commands.
 
 **Use commands to help you stop any containers**
 
