@@ -217,7 +217,14 @@ cd ~/aws-minicapstone-week2-Kubernetes/eks-cluster
 ```
 eksctl create cluster -f cluster.yaml
 ```
-When done, you can verify your cluster with: 
+When done, you can verify access your cluster with: 
+
+```
+kubectl cluster-info
+```
+
+![image](https://github.com/user-attachments/assets/ad58e338-4d42-4752-b400-33756bd0b1df)
+
 
 ```
 kubectl get nodes
