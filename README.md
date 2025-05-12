@@ -244,7 +244,46 @@ docker run -d -p 8080:8080 -e SERVER='http://localhost:8082' --network="host" $W
 
 Test your app by opening a browser to your instance public DNS name:8080
 
+### Running Another Version
 
+
+```
+cd ~/aws-minicapstone-week2-Kubernetes/events-website
+```
+
+```
+REGION=us-east-1
+AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+Web_REPO_NAME=capstone-eventweb
+Web_ECR_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${Web_REPO_NAME}
+```
+
+```
+aws ecr get-login-password | docker login --username AWS --password-stdin $Web_ECR_URI
+```
+
+```
+docker build -t capstone-eventweb .
+
+```
+
+```
+docker tag capstone-eventweb:latest $Web_ECR_URI:2.0
+
+```
+
+```
+docker push $Web_ECR_URI:2.0
+```
+
+```
+docker stop <container id of website>
+```
+
+
+```
+docker run -d -p 8080:8080 -e SERVER='http://localhost:8082' --network="host" $Web_ECR_URI:2.0
+```
 
 
 
