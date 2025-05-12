@@ -80,7 +80,11 @@ sudo yum install git
 ```
  git 
  ```
- You should see the git help options on the screen.
+```
+docker es
+```
+
+**2. You should see the git help options on the screen.
 
 ### 1.4 Install Node on the Server
 ```
@@ -124,8 +128,8 @@ ls
 
 ```
 cd ~/aws-minicapstone-week2-Kubernetes/events-api/
-vi .dockerignore
-```
+vi .docker```file
+
 Paste the below contents and save the file 
 ```
 node_modules
@@ -138,7 +142,15 @@ npm-debug.log
 ```
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 REGION=us-east-1  
-API_REPO_NAME=capstone-eventsapi
+API_REPO_NAME=capstone-events# Use aws public image
+FROM public.ecr.aws/docker/library/node:slim
+# Copy application code.
+COPY . /app/
+# Change the working directory
+WORKDIR /app
+# Install dependencies.
+RUN npm install
+# Start the Express apip
 ECR_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${API_REPO_NAME}
 aws ecr create-repository --repository-name $API_REPO_NAME
 
@@ -158,13 +170,23 @@ From the ECR console verify the registrees are created
 Run this from the events-api directory
 
 ```
-cd ~/aws-minicapstone-week2-Kubernetes/events-api
+cd ~/aws-minicapstone-week2-Kubernetes/events-apiCMD ["node", "server.js"]
+
+```
+***2.3.1.2 Create .dockerignore***
+```
+vi .dockerignore
+```
+Paste the below contents and save the file 
+```
+node_modules
+npm-debug.log
 ```
 
 ```
 REGION=us-east-1
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
-API_REPO_NAME=capstone-eventsapi
+API_REPO_NAME=capstone-docker build . -t events-api
 API_ECR_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${API_REPO_NAME}
 ```
 
@@ -204,23 +226,16 @@ aws ecr get-login-password | docker login --username AWS --password-stdin $Web_E
 ```
 
 ```
-docker build -t capstone-eventsweb .
-```
+docker build -t capstone-ap
 
 ```
-docker tag events-api:latest $Web_ECR_URI
 ```
-
-```
-docker push $Web_ECR_URI:latest
-```
-
-
-**2.2.1  Run and Test the docker images the Website from the Registry**
+eventswb .0
+```**13.4  Run and Test the docker images the Website from the RegistrLocally**
 
 To run events-api:
 ```
-docker run -d -p 8082:8082 $API_ECR_URI:latest
+docker run -d -p 8082:8082 $API_ECR_URI:latestevents-api:v1.0
 ```
 To run events-website:
 ```
@@ -295,5 +310,6 @@ Select EC2 from the console, then Instances (running)
 aws-minicapstone-week2-Kubernetes# eventsappstart
 This is a simple events app
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTQxNzg0ODRdfQ==
+eyJoaXN0b3J5IjpbLTE0MTA1NDc1NTAsLTE2MTQxNzg0ODRdfQ
+==
 -->
