@@ -354,11 +354,4 @@ Select EC2 from the console, then Instances (running)
 
 
 
-
-
-aws-minicapstone-week2-Kubernetes# eventsappstart
-This is a simple events app
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTA1NDc1NTAsLTE2MTQxNzg0ODRdfQ
-==
--->
+## 4.0 Deploy your web-based application, including the backend database
