@@ -207,6 +207,89 @@ Test your app by opening a browser to your instance public DNS name:8080
 
 ---
 
+## 2.1 
+### Create ECR repositories where images will be stored. 
+```
+AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+REGION=us-east-1  
+API_REPO_NAME=capstone-eventsapi
+ECR_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${API_REPO_NAME}
+aws ecr create-repository --repository-name $API_REPO_NAME
+
+```
+```
+Web_REPO_NAME=capstone-eventweb
+ECR_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${Web_REPO_NAME}
+aws ecr create-repository --repository-name $Web_REPO_NAME
+```
+From the ECR console verify the registrees are created
+
+![image](https://github.com/user-attachments/assets/40731d69-c7ef-4c05-bf6b-05cd7df3da46)
+
+
+### Using API Container Registry
+
+Run this from the events-api directory
+
+```
+cd ~/aws-minicapstone-week2-Kubernetes/events-api
+```
+
+```
+REGION=us-east-1
+AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+API_REPO_NAME=capstone-eventsapi
+API_ECR_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${API_REPO_NAME}
+```
+
+210700574655.dkr.ecr.us-east-1.amazonaws.com/capstone-eventsapi
+
+```
+aws ecr get-login-password | docker login --username AWS --password-stdin $API_ECR_URI
+```
+
+```
+docker build -t capstone-eventsapi .
+```
+
+```
+docker tag events-api:latest $API_ECR_URI
+```
+
+```
+docker push $API_ECR_URI:latest
+```
+
+
+### Using Website Container Registry
+**Run this from the events-website directory**
+
+```
+cd events-website
+```
+
+```
+REGION=us-east-1
+AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+Web_REPO_NAME=capstone-eventweb
+Web_ECR_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${Web_REPO_NAME}
+```
+
+```
+aws ecr get-login-password | docker login --username AWS --password-stdin $Web_ECR_URI
+```
+
+```
+docker build -t capstone-eventsweb .
+```
+
+```
+docker tag events-api:latest $Web_ECR_URI
+```
+
+```
+docker push $Web_ECR_URI:latest
+```
 ## 3. Deploy an EKS cluster
 
 ### 3.1 Run the following to create a Kubernetes cluster:
