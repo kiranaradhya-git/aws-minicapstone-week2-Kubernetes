@@ -138,7 +138,7 @@ npm-debug.log
 
 ***Copy the same file to other versions directories***
 
-### 2.1 Create ECR repositories where images will be stored. 
+###2.3 Create ECR repositories where images will be stored. 
 ```
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 REGION=us-east-1  
@@ -165,7 +165,7 @@ From the ECR console verify the registrees are created
 ![image](https://github.com/user-attachments/assets/40731d69-c7ef-4c05-bf6b-05cd7df3da46)
 
 
-### 2.2 Creating and Storing API Container on EC Registry
+### 2.4 Creating and Storing API Container on EC Registry
 
 Run this from the events-api directory
 
