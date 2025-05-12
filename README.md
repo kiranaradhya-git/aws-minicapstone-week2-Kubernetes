@@ -241,8 +241,10 @@ To run events-website:
 ```
 docker run -d -p 8080:8080 -e SERVER='http://localhost:8082' --network="host" $Web_ECR_URI:latest
 ```
+![image](https://github.com/user-attachments/assets/e26e2193-1ef7-4371-aa05-12d0e1be3001)
 
 Test your app by opening a browser to your instance public DNS name:8080
+
 
 ### Running Another Version
 
@@ -275,15 +277,21 @@ docker tag capstone-eventweb:latest $Web_ECR_URI:2.0
 ```
 docker push $Web_ECR_URI:2.0
 ```
+```
+docker ps -a
+```
+![image](https://github.com/user-attachments/assets/b0c6c810-ce82-453e-a3ff-5dc957f65068)
 
 ```
-docker stop <container id of website>
+docker stop <container id of website from previous command>
 ```
 
 
 ```
 docker run -d -p 8080:8080 -e SERVER='http://localhost:8082' --network="host" $Web_ECR_URI:2.0
 ```
+
+![image](https://github.com/user-attachments/assets/fa628475-220d-4e46-b932-7a49e04ccfed)
 
 
 
