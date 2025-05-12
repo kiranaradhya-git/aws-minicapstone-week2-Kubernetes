@@ -104,8 +104,8 @@ Should see the npm help options on the screen.
 
 ### 2.1 Make a new folder and change into it
 ```
-mkdir ~/aws-minicapstone-week2-Kubernetes/events-api/ 
-cd ~/aws-minicapstone-week2-Kubernetes/events-api/
+mkdir ~/aws-minicapstone-week2-Kubernetes/
+cd ~/aws-minicapstone-week2-Kubernetes/
 ```
 
 ### 2.2 Initialize the folder for Git and pull the Git repo with the case study
@@ -120,30 +120,10 @@ Verify that several folders and a README now exist
 ls
 ```
 
-### 2.3 Containerize the Application Version 1
-**2.3.1  Build the events-api container image**
-
-***2.3.1.1 Create Dockerfile***
-
-cd ~/aws-minicapstone-week2-Kubernetes/events-websiteapi/
-vi .Dockerfile
-
-Paste the below contents and save the file 
-```
-# Use aws public image
-FROM public.ecr.aws/docker/library/node:slim
-# Copy application code.
-COPY . /app/
-# Change the working directory
-WORKDIR /app
-# Install dependencies.
-RUN npm install
-# Start the Express app
-CMD ["node", "server.js"]
+### 2.2.2 Create .dockerignore in all events-api and events-website folders
 
 ```
-***2.3.1.2 Create .dockerignore***
-```
+cd ~/aws-minicapstone-week2-Kubernetes/events-api/
 vi .dockerignore
 ```
 Paste the below contents and save the file 
@@ -151,64 +131,10 @@ Paste the below contents and save the file
 node_modules
 npm-debug.log
 ```
-```
-docker build . -t events-api:v1.0
-```
-**2.3.2 Build the events-website container image**
 
-***2.3.2.1 Create Dockerfile***
+***Copy the same file to other versions directories***
 
-vi .Dockerfile
-
-Paste the below contents and save the file 
-```
-# Use aws public image
-FROM public.ecr.aws/docker/library/node:slim
-# Copy application code.
-COPY . /app/
-# Change the working directory
-WORKDIR /app
-# Install dependencies.
-RUN npm install
-# Start the Express app
-CMD ["node", "server.js"]
-
-```
-***2.3.2.2 Create .dockerignore***
-```
-vi .dockerignore
-```
-Paste the below contents and save the file 
-```
-node_modules
-npm-debug.log
-```
-```
-docker build . -t events-website:v1.0
-```
-
-**2.3.3 To view the Docker images just built:**
-```
-docker images
-```
-
-**2.3.4  Run and Test the docker images the Website Locally**
-
-To run events-api:
-```
-docker run -d -p 8082:8082 events-api:v1.0
-```
-To run events-website:
-```
-docker run -d -p 8080:8080 -e SERVER='http://localhost:8082' --network="host" events-website:v1.0
-```
-
-Test your app by opening a browser to your instance public DNS name:8080
-
----
-
-## 2.1 
-### Create ECR repositories where images will be stored. 
+### 2.1 Create ECR repositories where images will be stored. 
 ```
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 REGION=us-east-1  
@@ -227,7 +153,7 @@ From the ECR console verify the registrees are created
 ![image](https://github.com/user-attachments/assets/40731d69-c7ef-4c05-bf6b-05cd7df3da46)
 
 
-### Using API Container Registry
+### 2.2 Creating and Storing API Container on EC Registry
 
 Run this from the events-api directory
 
@@ -241,8 +167,6 @@ AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 API_REPO_NAME=capstone-eventsapi
 API_ECR_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${API_REPO_NAME}
 ```
-
-210700574655.dkr.ecr.us-east-1.amazonaws.com/capstone-eventsapi
 
 ```
 aws ecr get-login-password | docker login --username AWS --password-stdin $API_ECR_URI
@@ -261,7 +185,7 @@ docker push $API_ECR_URI:latest
 ```
 
 
-### Using Website Container Registry
+### Creating and Storing Website Container Registry
 **Run this from the events-website directory**
 
 ```
@@ -290,6 +214,24 @@ docker tag events-api:latest $Web_ECR_URI
 ```
 docker push $Web_ECR_URI:latest
 ```
+
+
+**2.2.1  Run and Test the docker images the Website from the Registry**
+
+To run events-api:
+```
+docker run -d -p 8082:8082 $API_ECR_URI:latest
+```
+To run events-website:
+```
+docker run -d -p 8080:8080 -e SERVER='http://localhost:8082' --network="host" $Web_ECR_URI:latest
+```
+
+Test your app by opening a browser to your instance public DNS name:8080
+
+
+
+
 
 **Use commands to help you stop any containers**
 
