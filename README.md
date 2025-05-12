@@ -265,7 +265,7 @@ docker push $API_ECR_URI:latest
 **Run this from the events-website directory**
 
 ```
-cd events-website
+cd ~/aws-minicapstone-week2-Kubernetes/events-website
 ```
 
 ```
