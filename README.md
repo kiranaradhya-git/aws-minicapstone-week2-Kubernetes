@@ -80,11 +80,8 @@ sudo yum install git
 ```
  git 
  ```
-```
-docker es
-```
 
-**2. You should see the git help options on the screen.
+You should see the git help options on the screen
 
 ### 1.4 Install Node on the Server
 ```
