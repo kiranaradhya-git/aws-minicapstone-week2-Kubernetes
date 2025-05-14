@@ -139,28 +139,24 @@ npm-debug.log
 ***Copy the same file to other versions directories***
 
 ###2. Create ECR repositories where images will be stored. 
+
+#### Setting Variables 
+
 ```
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 REGION=us-east-1  
-API_REPO_NAME=capstone-events# Use aws public image
-FROM public.ecr.aws/docker/library/node:slim
-# Copy application code.
-COPY . /app/
-# Change the working directory
-WORKDIR /app
-# Install dependencies.
-RUN npm install
-# Start the Express apip
-ECR_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${API_REPO_NAME}
-aws ecr create-repository --repository-name $API_REPO_NAME
-
-```
-```
+API_REPO_NAME=capstone-events
 Web_REPO_NAME=capstone-eventweb
-ECR_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${Web_REPO_NAME}
-aws ecr create-repository --repository-name $Web_REPO_NAME
+EVENTSJOB_REPO_NAME=capstone-eventsjob
 ```
-From the ECR console verify the registrees are created
+```
+aws ecr create-repository --repository-name $API_REPO_NAME
+aws ecr create-repository --repository-name $Web_REPO_NAME
+aws ecr create-repository --repository-name $EVENTSJOB_REPO_NAME
+```
+
+
+From the ECR console verify these new three registrees are created
 
 ![image](https://github.com/user-attachments/assets/40731d69-c7ef-4c05-bf6b-05cd7df3da46)
 
@@ -186,7 +182,6 @@ npm-debug.log
 ```
 REGION=us-east-1
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
-API_REPO_NAME=capstone-docker build . -t events-api
 API_ECR_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${API_REPO_NAME}
 ```
 
