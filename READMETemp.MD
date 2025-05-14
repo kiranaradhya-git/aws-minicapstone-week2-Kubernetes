@@ -20,5 +20,9 @@ aws ecr get-login-password | docker login --username AWS --password-stdin $EVENT
 ```
 
 ```
-docker build -t capstone-eventsjob
+docker build -t capstone-eventsjob .
+```
+
+```
+docker tag capstone-eventsjob:latest $EVENTSJOB_ECR_URI:1.0
 ```
