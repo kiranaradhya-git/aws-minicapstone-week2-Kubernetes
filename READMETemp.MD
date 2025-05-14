@@ -16,9 +16,9 @@ npm-debug.log
 ```
 ***2.5.2 Create Container Image and Store it on EC registry***
 ```
-aws ecr get-login-password | docker login --username AWS --password-stdin $Web_ECR_URI
+aws ecr get-login-password | docker login --username AWS --password-stdin $EVENTSJOB_ECR_URI
 ```
 
 ```
-docker build -t capstone-eventweb
+docker build -t capstone-eventsjob
 ```
