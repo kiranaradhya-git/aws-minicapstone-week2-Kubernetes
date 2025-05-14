@@ -138,7 +138,7 @@ npm-debug.log
 
 ***Copy the same file to other versions directories***
 
-###2.3 Create ECR repositories where images will be stored. 
+###2. Create ECR repositories where images will be stored. 
 ```
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 REGION=us-east-1  
@@ -283,6 +283,9 @@ You should be able to see the repositories and the images in the image repositor
 docker ps -a
 ```
 ![image](https://github.com/user-attachments/assets/b0c6c810-ce82-453e-a3ff-5dc957f65068)
+```
+docker push $Web_ECR_URI:2.0
+```
 
 ```
 docker stop <container id of website from previous command>
@@ -355,3 +358,9 @@ Select EC2 from the console, then Instances (running)
 
 
 ## 4.0 Deploy your web-based application, including the backend database
+
+aws-minicapstone-week2-Kubernetes# eventsappstart
+This is a simple events app
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjEwOTgyODQ0NV19
+-->
