@@ -1,13 +1,62 @@
 ## 4.0 Deploy your web-based application, including the backend database
 
-## 4. Deploying Backend Database
+### 4.1 Deploying Backend Database
+### 4.1.1 Installing Helm
 
-### 4.1 Creating and Storing Website Container Registry
+```
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
+---
+
+```
+chmod 700 get_helm.sh
+./get_helm.sh
+```
+
+***To test the installation, type:***
+```
+helm
+```
+You should get help on using Helm.
+
+### 4.1.2 Installing MariaDB
+
+```
+helm install database-server oci://registry-1.docker.io/bitnamicharts/mariadb
+```
+
+### 4.1.3 To view the installation
+```
+kubectl get pods
+```
+![image](https://github.com/user-attachments/assets/993f3641-7b83-4500-abf3-8c9ac54d0101)
+
+```
+kubectl get statefulsets
+```
+
+![image](https://github.com/user-attachments/assets/b1a716af-c668-4c21-9ae3-fbe4a026acc6)
+
+```
+kubectl get service
+```
+
+![image](https://github.com/user-attachments/assets/73a0d148-dfd3-4702-954e-dfbc3a37116c)
+
+
+### 4.1.4  To retrieve the status of your database
+```
+helm status database-server
+```
+
+![image](https://github.com/user-attachments/assets/eee8cff8-a766-4873-8f04-653a588a2c19)
+
+
+### 4.2 Creating and Storing Website Container Registry
 ```
 cd ~/aws-minicapstone-week2-Kubernetes/database-initializer/
 ```
 
-#### 4.1.1 Create .dockerignore
+#### 4.2.1 Create .dockerignore
 ```
 vi .dockerignore
 ```
@@ -16,7 +65,7 @@ Paste the below contents and save the file
 node_modules
 npm-debug.log
 ```
-#### 4.1.2 Create Container Image and Store it on EC registry
+#### 4.2.2 Create Container Image and Store it on EC registry
 ```
 aws ecr get-login-password | docker login --username AWS --password-stdin $EVENTSJOB_ECR_URI
 ```
