@@ -26,3 +26,7 @@ docker build -t capstone-eventsjob .
 ```
 docker tag capstone-eventsjob:latest $EVENTSJOB_ECR_URI:1.0
 ```
+```
+docker push $EVENTSJOB_ECR_URI:1.0
+```
+
