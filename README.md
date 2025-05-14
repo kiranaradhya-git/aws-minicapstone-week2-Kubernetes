@@ -175,7 +175,7 @@ Run this from the events-api directory
 cd ~/aws-minicapstone-week2-Kubernetes/events-api
 
 ```
-***2.4.1 Create .dockerignore***
+#### 2.4.1 Create .dockerignore
 ```
 vi .dockerignore
 ```
@@ -184,7 +184,7 @@ Paste the below contents and save the file
 node_modules
 npm-debug.log
 ```
-***2.4.2 Create Container Image and Store it on EC registry***
+#### 2.4.2 Create Container Image and Store it on EC registry
 ```
 aws ecr get-login-password | docker login --username AWS --password-stdin $API_ECR_URI
 ```
@@ -227,7 +227,7 @@ docker build -t capstone-eventweb
 
 ```
 
-**13.4  Run and Test the docker images the Website from the RegistrLocally**
+### 2.6  Run and Test the docker images the Website from the Registr Locally
 
 To run events-api:
 ```
@@ -242,7 +242,7 @@ docker run -d -p 8080:8080 -e SERVER='http://localhost:8082' --network="host" $W
 Test your app by opening a browser to your instance public DNS name:8080
 
 
-### Running Another Version
+### 2.6.1 Running Another Version
 
 
 ```
@@ -250,9 +250,6 @@ cd ~/aws-minicapstone-week2-Kubernetes/events-website
 ```
 
 ```
-REGION=us-east-1
-AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
-Web_REPO_NAME=capstone-eventweb
 Web_ECR_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${Web_REPO_NAME}
 ```
 
@@ -269,20 +266,21 @@ docker build -t capstone-eventweb .
 docker tag capstone-eventweb:latest $Web_ECR_URI:2.0
 
 ```
-![image](https://github.com/user-attachments/assets/b8ccbc34-a42b-47d0-b9ea-329cd0d58de1)
 
 ```
 docker push $Web_ECR_URI:2.0
 ```
+
+![image](https://github.com/user-attachments/assets/b8ccbc34-a42b-47d0-b9ea-329cd0d58de1)
+
+
 You should be able to see the repositories and the images in the image repository.
 
 ```
 docker ps -a
 ```
 ![image](https://github.com/user-attachments/assets/b0c6c810-ce82-453e-a3ff-5dc957f65068)
-```
-docker push $Web_ECR_URI:2.0
-```
+
 
 ```
 docker stop <container id of website from previous command>
@@ -295,7 +293,8 @@ docker run -d -p 8080:8080 -e SERVER='http://localhost:8082' --network="host" $W
 
 ![image](https://github.com/user-attachments/assets/fa628475-220d-4e46-b932-7a49e04ccfed)
 
-You should be able to create a new version of your application using Docker commands.
+Now you completed the creation a new version of your application using Docker commands.
+
 
 **Use commands to help you stop any containers**
 
