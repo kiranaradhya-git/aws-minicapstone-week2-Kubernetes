@@ -170,7 +170,7 @@ From the ECR console verify the registrees are created
 Run this from the events-api directory
 
 ```
-cd ~/aws-minicapstone-week2-Kubernetes/events-apiCMD ["node", "server.js"]
+cd ~/aws-minicapstone-week2-Kubernetes/events-api
 
 ```
 ***2.3.1.2 Create .dockerignore***
