@@ -1,40 +1,24 @@
-### 4.1 Deploying Backend Database
+## 4. Deploying Backend Database
 
-#### 4.4.1 Using Helm to install Database on Kubernetes Cluster
-Use the below command to Install Helm
-
+### 4.1 Creating and Storing Website Container Registry
 ```
-curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3
-chmod 700 get_helm.sh
-./get_helm.sh
-```
-After installation 
-```
-help
-```
-You should get help on using Helm.
-
-#### 4.2  Installing MariaDB
-
-```
-helm install database-server oci://registry-1.docker.io/bitnamicharts/mariadb
+cd ~/aws-minicapstone-week2-Kubernetes/database-initializer/
 ```
 
+***2.5.1 Create .dockerignore***
 ```
-
-
-
+vi .dockerignore
+```
+Paste the below contents and save the file 
+```
+node_modules
+npm-debug.log
+```
+***2.5.2 Create Container Image and Store it on EC registry***
+```
+aws ecr get-login-password | docker login --username AWS --password-stdin $Web_ECR_URI
 ```
 
 ```
-docker tag capstone-eventweb:latest $Web_ECR_URI:2.0
-
-```
-
-```
-docker push $Web_ECR_URI:2.0
-```
-
-```
-docker run -d -p 8080:8080 -e SERVER='http://localhost:8082' --network="host" $Web_ECR_URI:2.0
+docker build -t capstone-eventweb
 ```
