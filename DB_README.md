@@ -13,6 +13,7 @@ chmod 700 get_helm.sh
 ```
 
 ***To test the installation, type:***
+
 ```
 helm
 ```
@@ -28,6 +29,7 @@ helm install database-server oci://registry-1.docker.io/bitnamicharts/mariadb
 ```
 kubectl get pods
 ```
+
 ![image](https://github.com/user-attachments/assets/993f3641-7b83-4500-abf3-8c9ac54d0101)
 
 ```
