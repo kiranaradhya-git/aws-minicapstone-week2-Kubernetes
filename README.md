@@ -138,9 +138,9 @@ npm-debug.log
 
 ***Copy the same file to other versions directories***
 
-###2. Create ECR repositories where images will be stored. 
+### 2. Create ECR repositories where images will be stored. 
 
-#### Setting Variables 
+#### 2.1 Setting Variables 
 
 ```
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
@@ -149,17 +149,23 @@ API_REPO_NAME=capstone-events
 Web_REPO_NAME=capstone-eventweb
 EVENTSJOB_REPO_NAME=capstone-eventsjob
 ```
+### 2.2 Create Repositories
 ```
 aws ecr create-repository --repository-name $API_REPO_NAME
 aws ecr create-repository --repository-name $Web_REPO_NAME
 aws ecr create-repository --repository-name $EVENTSJOB_REPO_NAME
 ```
-
-
 From the ECR console verify these new three registrees are created
 
 ![image](https://github.com/user-attachments/assets/40731d69-c7ef-4c05-bf6b-05cd7df3da46)
 
+### 2.3 Store the repositories as variables
+
+```
+API_ECR_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${API_REPO_NAME}
+Web_ECR_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${Web_REPO_NAME}
+EVENTSJOB_ECR_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${EVENTSJOB_REPO_NAME}
+```
 
 ### 2.4 Creating and Storing API Container on EC Registry
 
@@ -177,12 +183,6 @@ Paste the below contents and save the file
 ```
 node_modules
 npm-debug.log
-```
-
-```
-REGION=us-east-1
-AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
-API_ECR_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${API_REPO_NAME}
 ```
 
 ```
@@ -207,13 +207,6 @@ docker push $API_ECR_URI:latest
 
 ```
 cd ~/aws-minicapstone-week2-Kubernetes/events-website
-```
-
-```
-REGION=us-east-1
-AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
-Web_REPO_NAME=capstone-eventweb
-Web_ECR_URI=${AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/${Web_REPO_NAME}
 ```
 
 ```
