@@ -2,7 +2,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: km-Capstone
+  name: km02-capstone
   region: us-east-1
   version: "1.32"
 
@@ -16,12 +16,12 @@ iam:
 
   serviceAccounts:
   - metadata:
-      name: cluster-autoscaler-kmcapstone
+      name: cluster-autoscaler-km02capstone
       namespace: kube-system
     wellKnownPolicies:
       autoScaler: true
   - metadata:
-      name: aws-load-balancer-controller-kmCapstone
+      name: aws-load-balancer-controller-km02capstone
       namespace: kube-system
     wellKnownPolicies:
       awsLoadBalancerController: true
