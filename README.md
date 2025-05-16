@@ -233,7 +233,7 @@ docker build -t capstone-eventweb
 
 To run events-api:
 ```
-docker run -d -p 8082:8082 $API_ECR_URI:latestevents-api:v1.0
+docker run -d -p 8082:8082 $API_ECR_URI:latest
 ```
 To run events-website:
 ```
