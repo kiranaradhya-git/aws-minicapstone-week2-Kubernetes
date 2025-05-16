@@ -185,6 +185,8 @@ node_modules
 npm-debug.log
 ```
 #### 2.4.2 Create Container Image and Store it on EC registry
+
+Log in to an AWS Elastic Container Registry (ECR) using the Docker CLI. Usename always AWS and pass the aws ecr get-login-password command is securely passed password to Docker.
 ```
 aws ecr get-login-password | docker login --username AWS --password-stdin $API_ECR_URI
 ```
