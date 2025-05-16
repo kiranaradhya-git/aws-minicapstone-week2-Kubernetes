@@ -145,7 +145,7 @@ npm-debug.log
 ```
 AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
 REGION=us-east-1  
-API_REPO_NAME=capstone-events
+API_REPO_NAME=capstone-eventsapi
 Web_REPO_NAME=capstone-eventweb
 EVENTSJOB_REPO_NAME=capstone-eventsjob
 ```
