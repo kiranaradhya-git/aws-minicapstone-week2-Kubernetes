@@ -301,6 +301,8 @@ docker stop <container id of website from previous command>
 docker run -d -p 8080:8080 -e SERVER='http://localhost:8082' --network="host" $Web_ECR_URI:2.0
 ```
 
+***Refresh your browser Window in which you have opened the Event Web Site and now you should see heading with version 2.0
+
 ![image](https://github.com/user-attachments/assets/fa628475-220d-4e46-b932-7a49e04ccfed)
 
 Now you completed the creation a new version of your application using Docker commands.
