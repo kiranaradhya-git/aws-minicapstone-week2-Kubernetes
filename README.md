@@ -239,9 +239,17 @@ To run events-website:
 ```
 docker run -d -p 8080:8080 -e SERVER='http://localhost:8082' --network="host" $Web_ECR_URI:latest
 ```
+Test your app by opening a browser to your instance public DNS name:8080
+![image](https://github.com/user-attachments/assets/94445e86-4804-4e64-a1a0-dcbce3064360)
+
+```
+http://<Public DNS Name>:8080
+```
+You should see the Events Web Page
+
 ![image](https://github.com/user-attachments/assets/e26e2193-1ef7-4371-aa05-12d0e1be3001)
 
-Test your app by opening a browser to your instance public DNS name:8080
+
 
 
 ### 2.6.1 Running Another Version
