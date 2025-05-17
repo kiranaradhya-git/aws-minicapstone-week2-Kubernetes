@@ -10,5 +10,5 @@ spec:
     protocol: TCP
   selector:
     app: autoscale
-    env: training
+    env: capstone
   type: LoadBalancer  
