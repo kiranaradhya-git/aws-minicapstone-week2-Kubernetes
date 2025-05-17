@@ -561,6 +561,10 @@ delete svc autoscale-app-svc
 #### 5.1.1 Update the image in the Blue Deploymet file 
 
 ```
+cd BlueGreenDeployment
+```
+
+```
 vi deployment-blue.yaml
 ```
 ![image](https://github.com/user-attachments/assets/ec94b49c-fb41-4df3-99fc-6c9ef76ad3a0)
