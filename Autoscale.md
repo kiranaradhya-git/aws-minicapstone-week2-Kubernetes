@@ -31,12 +31,15 @@ Checking the Autoscale working
 kubectl get hba -w
 ```
 
+![image](https://github.com/user-attachments/assets/a83c06b8-f1df-4e0a-af36-b56154eb63d9)
+
+After test completed Delete the Autoscale 
+
+```
+delete svc autoscale-app-svc
+```
 
 # 5 Blue Green Deployment
-
-```
-kubectl delete svc autoscale-app-svc
-```
 
 Blue Deployment
 
