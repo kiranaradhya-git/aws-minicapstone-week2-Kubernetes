@@ -21,3 +21,13 @@
 #### Elastic IP Adresses 
 
 ![image](https://github.com/user-attachments/assets/ac209aec-0bd3-4ab1-847d-25eea9053de0)
+
+#### Routing Tables
+
+![image](https://github.com/user-attachments/assets/74132cda-8048-4b0d-8ff4-4cb3296ced82)
+
+#### Security Groups
+
+![image](https://github.com/user-attachments/assets/a3e9269e-5413-49cd-b7ef-734ec999bc04)
+
+
