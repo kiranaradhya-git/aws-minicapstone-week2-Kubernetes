@@ -500,6 +500,25 @@ You should see similar output to shown here:
 
 ![image](https://github.com/user-attachments/assets/9d0270d4-f48d-4d7e-8ef5-76a14d9c5dba)
 
+### 4.3.3 Modifying the Events-API App to Use the Database
+#### 4.3.3.1 Modify the API deployment file
+```
+vi events-api-deployment
+```
+Replace the image with Events API image you want to use from ECR
+![image](https://github.com/user-attachments/assets/401c52c2-b0b7-4334-9864-67410f04a109)
+
+Modifying the Events-API App to Use the Database
+
+#### 4.3.3.2 Apply the file
+
+```
+kubectl apply -f api-deployment.yaml
+```
+
+Now the Events Web should be using the Database
+
+
 ##  4.4 Deployment of Application with Auto Scaling enabled
 ### 4.4.1 Depoly the Autoscale group
 ```
