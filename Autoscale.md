@@ -1,5 +1,5 @@
-# 4.1 Deployment of Application with Auto Scaling enabled
-### 4.1.1 Depoly the Autoscale group
+##  4.4 Deployment of Application with Auto Scaling enabled
+### 4.4.1 Depoly the Autoscale group
 ```
 cd HPA-demo
 ```
@@ -7,7 +7,7 @@ cd HPA-demo
 ```
 kubectl apply -f autoscale.yaml
 ```
-### 4.1.2 Replace the image path to Web Server on Deployment configuration and run the deployment
+### 4.4.2 Replace the image path to Web Server on Deployment configuration and run the deployment
 
 ```
 vi deployment.yaml
@@ -19,7 +19,7 @@ vi deployment.yaml
 kubectl apply -f deployment.yaml
 ```
 
-### 4.1.3 Deply the Service
+### 4.4.3 Deply the Service
 ```
 kubectl apply -f service.yaml
 ```
@@ -53,7 +53,7 @@ After test completed Delete the Autoscale
 delete svc autoscale-app-svc
 ```
 
-## 5 Blue Green Deployment
+# 5 Blue Green Deployment
 
 ### 5.1 Blue Deployment
 #### 5.1.1 Update the image in the Blue Deploymet file 
