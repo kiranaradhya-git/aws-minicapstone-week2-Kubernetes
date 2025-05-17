@@ -21,9 +21,10 @@ kubectl get pods
 ```
 kubectl get svc
 ```
+![image](https://github.com/user-attachments/assets/e63605a8-5d90-47a3-825d-479efd4723f9)
 
 Note down the Load balancer external  IP
-a0c56f8e5c47046aeb229415cae3be65-1492311907.us-east-1.elb.amazonaws.com
+
 
 Checking the Autoscale working 
 ```
@@ -59,6 +60,14 @@ Change the service config to green
 ```
 kubectl apply -f service.yaml
 ```
+
+```
+kubectl get svc
+```
+![image](https://github.com/user-attachments/assets/05d64039-37f7-4902-a49e-3d49f2fd344a)
+
+
+Note down the Load balancer external  IP
 
 Deleting the Blue Deployment
 
