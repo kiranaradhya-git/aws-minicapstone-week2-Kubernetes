@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: events-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: events-api
+  template:
+    metadata:
+      labels:
+        app: events-api
+    spec:
+      containers:
+        - name: events-api
+          image: 210700574655.dkr.ecr.us-east-1.amazonaws.com/capstone-eventsapi:2.0
+          ports:
+            - containerPort: 8082
+          env:
+            - name: DBHOST
+              value: "database-server-mariadb.default"
+            - name: DBUSER
+              value: "root"
+            - name: DBPASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: database-server-mariadb
+                  key: mariadb-root-password
+            - name: DBDATABASE
+              value: "events_db"
