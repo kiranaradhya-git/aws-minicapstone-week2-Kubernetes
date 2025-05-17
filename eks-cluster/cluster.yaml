@@ -2,7 +2,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: km02-capstone
+  name: km05-capstone
   region: us-east-1
   version: "1.32"
 
@@ -16,12 +16,12 @@ iam:
 
   serviceAccounts:
   - metadata:
-      name: cluster-autoscaler-km02capstone
+      name: cluster-autoscaler-km05capstone
       namespace: kube-system
     wellKnownPolicies:
       autoScaler: true
   - metadata:
-      name: aws-load-balancer-controller-km02capstone
+      name: aws-lb-controller-km05capstone
       namespace: kube-system
     wellKnownPolicies:
       awsLoadBalancerController: true
@@ -39,7 +39,7 @@ addons:
     version: latest
  
 managedNodeGroups:
-  - name: nodegroup-1
+  - name: nodegroup-km05
     instanceType: t3.medium
     minSize: 3
     desiredCapacity: 3
