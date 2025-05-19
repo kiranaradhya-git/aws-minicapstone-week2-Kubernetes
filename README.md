@@ -651,7 +651,25 @@ kubectl get deployments
 ```
 ![image](https://github.com/user-attachments/assets/57c20f82-c2ae-4c51-bf2d-f5c3b221abf1)
 
+---
 
+## Cleanup Activity 
+
+```
+cd ~/aws-minicapstone-week2-Kubernetes/
+```
+
+```
+chmod 755 cleanup.sh
+```
+
+**Run the Clean Up Script**
+
+```
+./cleanup.sh
+```
+
+This should delete the cluster and resources that you created during this activity
 
 
 
