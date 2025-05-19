@@ -1,9 +1,111 @@
 # Set required variables
-# REPO_NAME="capstone-project"
-REGION="us-east-1"  
+AWS_ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
+REGION=us-east-1  
+API_REPO_NAME=capstone-eventsapi
+Web_REPO_NAME=capstone-eventweb
+EVENTSJOB_REPO_NAME=capstone-eventsjob
 CLUSTER_NAME="km05-capstone"
 
-# Step 3: Drain all nodes in the cluster (forcefully if needed)
+echo "Starting cleanup process for ECR repository '$API_REPO_NAME' ..."
+
+# Step 1.1: List and delete images in API ECR repository
+echo "Checking for images in ECR repository '$API_REPO_NAME'..."
+image_ids=$(aws ecr list-images \
+    --repository-name "$API_REPO_NAME" \
+    --query 'imageIds' \
+    --output json \
+    --region "$REGION")
+
+if [ "$image_ids" == "[]" ]; then
+    echo "No images found in repository '$API_REPO_NAME'. Skipping image deletion."
+else
+    echo "Images found in '$API_REPO_NAME'. Deleting all images..."
+    aws ecr batch-delete-image \
+        --repository-name "$API_REPO_NAME" \
+        --image-ids "$image_ids" \
+        --region "$REGION"
+    echo "All images deleted successfully from '$API_REPO_NAME'."
+fi
+
+# Step 1.2 Delete the ECR repository
+echo "Deleting ECR repository '$API_REPO_NAME'..."
+aws ecr delete-repository \
+    --repository-name "$API_REPO_NAME" \
+    --force \
+    --region "$REGION"
+
+if [ $? -eq 0 ]; then
+    echo "Repository '$API_REPO_NAME' deleted successfully."
+else
+    echo "Failed to delete repository '$API_REPO_NAME'."
+fi
+
+# Step 2.1: List and delete images in Web ECR repository
+echo "Checking for images in ECR repository '$Web_REPO_NAME'..."
+image_ids=$(aws ecr list-images \
+    --repository-name "$Web_REPO_NAME" \
+    --query 'imageIds' \
+    --output json \
+    --region "$REGION")
+
+if [ "$image_ids" == "[]" ]; then
+    echo "No images found in repository '$Web_REPO_NAME'. Skipping image deletion."
+else
+    echo "Images found in '$Web_REPO_NAME'. Deleting all images..."
+    aws ecr batch-delete-image \
+        --repository-name "$Web_REPO_NAME" \
+        --image-ids "$image_ids" \
+        --region "$REGION"
+    echo "All images deleted successfully from '$Web_REPO_NAME'."
+fi
+
+# Step 2.2: Delete the ECR repository
+echo "Deleting ECR repository '$Web_REPO_NAME'..."
+aws ecr delete-repository \
+    --repository-name "$Web_REPO_NAME" \
+    --force \
+    --region "$REGION"
+
+if [ $? -eq 0 ]; then
+    echo "Repository '$Web_REPO_NAME' deleted successfully."
+else
+    echo "Failed to delete repository '$Web_REPO_NAME'."
+fi
+
+# Step 3.1: List and delete images in Web ECR repository
+echo "Checking for images in ECR repository '$EVENTSJOB_REPO_NAME'..."
+image_ids=$(aws ecr list-images \
+    --repository-name "$EVENTSJOB_REPO_NAME" \
+    --query 'imageIds' \
+    --output json \
+    --region "$REGION")
+
+if [ "$image_ids" == "[]" ]; then
+    echo "No images found in repository '$EVENTSJOB_REPO_NAME'. Skipping image deletion."
+else
+    echo "Images found in '$EVENTSJOB_REPO_NAME'. Deleting all images..."
+    aws ecr batch-delete-image \
+        --repository-name "$EVENTSJOB_REPO_NAME" \
+        --image-ids "$image_ids" \
+        --region "$REGION"
+    echo "All images deleted successfully from '$EVENTSJOB_REPO_NAME'."
+fi
+
+# Step 3.2: Delete the ECR repository
+echo "Deleting ECR repository '$EVENTSJOB_REPO_NAME'..."
+aws ecr delete-repository \
+    --repository-name "$EVENTSJOB_REPO_NAME" \
+    --force \
+    --region "$REGION"
+
+if [ $? -eq 0 ]; then
+    echo "Repository '$EVENTSJOB_REPO_NAME' deleted successfully."
+else
+    echo "Failed to delete repository '$EVENTSJOB_REPO_NAME'."
+fi
+
+
+# Step 4: Drain all nodes in the cluster (forcefully if needed)
 # Temporarily delete the PodDisruptionBudget  if it exists
 echo "Checking for PodDisruptionBudgets in kube-system namespace..."
 pdbs=$(kubectl get pdb -n kube-system -o name)
@@ -17,6 +119,7 @@ if [ -n "$pdbs" ]; then
 else
     echo "No PodDisruptionBudgets found in kube-system."
 fi
+
 
 echo "Locating worker nodes in cluster '$CLUSTER_NAME'..."
 nodes=$(kubectl get nodes --no-headers | awk '{print $1}')
