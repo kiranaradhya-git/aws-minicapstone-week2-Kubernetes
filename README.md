@@ -362,8 +362,14 @@ From the AWS console:
 Select EC2 from the console, then Instances (running)
 ![image](https://github.com/user-attachments/assets/47fcf386-a2f8-4105-be71-e65e31c4497d)
 
+From Command Line you can list the nodes
+```
+kubectl get nodes
+```
 
 
+
+Note : The Cluster info is stored in "/home/ec2-user/.kube/config"
 ## 4.0 Deploy your web-based application, including the backend database
 
 ### 4.1 Deploying Backend Database
