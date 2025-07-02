@@ -38,9 +38,11 @@ cd /root/pb_pod_setup-2.5.1
 ```
 
 ```
-Command to upgrade Vault
+Command to upgrade CDB
 ```
 
+### Testing the upgrade
+kuectl desc deployment  /vault -n vault
 
 ## MSVx 2.6.1 Vault and CDB
 
@@ -55,5 +57,5 @@ Command to upgrade Vault
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTI2OTE4MjBdfQ==
+eyJoaXN0b3J5IjpbNzQwOTYxNzAzXX0=
 -->
