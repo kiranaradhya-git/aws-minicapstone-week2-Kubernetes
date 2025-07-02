@@ -2,7 +2,7 @@
 - Vault much changes
 - CDB support new features and these need to be added manually, reference upgrade guide
 
-## MSVx 2.5.1 Vault and CDB - 30 mins
+## MSVx 2.5.1 Vault and CDB - (30 minutes)
 
 ### Pre-Requisites 
 
@@ -48,7 +48,7 @@ kuectl desc deployment  /cdb -n cdb
 
 Log in to the web Console
 
-## MSVx 2.6.1 Vault and CDB - 15 Mins
+## MSVx 2.6.1 Vault and CDB - (15 Minutes)
 
 - New Feature to enable MFSA
 
@@ -114,5 +114,5 @@ Log in to the web Console
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1ODMxMzIwMSwtMTcxMTczNDU1NV19
+eyJoaXN0b3J5IjpbNTExMzc1MDc3LC0xNzExNzM0NTU1XX0=
 -->
