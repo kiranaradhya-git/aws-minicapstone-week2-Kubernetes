@@ -68,6 +68,12 @@ Log in to the web Console
 
 [https://github.dxc.com/SR2/vault_consul_container/archive/refs/tags/v2.6.1.tar.gz](https://github.dxc.com/SR2/vault_consul_container/archive/refs/tags/v2.6.1.tar.gz "https://github.dxc.com/sr2/vault_consul_container/archive/refs/tags/v2.6.1.tar.gz")
 
+** Check the downloaded POD versions
+
+```
+jq -r '.[] | select(.msvx_service == "stackstorm") | "\(.image):\(.image_tag)"' container_versions.json
+```
+
 
 ```
 cd /root/pb_pod_setup-2.6.1
@@ -146,6 +152,7 @@ Path outside the container "/docker/data/stackstorm/files-repository"
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NjU2MDU2MCwxMjI4NDgyODQ3LDExMz
-Y1MDY3MTQsLTE1ODc5Mzg0OTQsLTE3MTE3MzQ1NTVdfQ==
+eyJoaXN0b3J5IjpbLTczODE3MDcxNiwtNzg2NTYwNTYwLDEyMj
+g0ODI4NDcsMTEzNjUwNjcxNCwtMTU4NzkzODQ5NCwtMTcxMTcz
+NDU1NV19
 -->
