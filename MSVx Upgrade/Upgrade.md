@@ -124,8 +124,8 @@ NOTE: Current version is 3.5 (MSVx 2.2) and
 
 **Step 3:**  Log on to the StackStorm node to preserve data.
 To Store outside the container 
-/opt/stackstorm/files-repository
-/docker/data/stackstorm/files-repository 
+Path inside container /opt/stackstorm/files-repository 
+Path outside the container /docker/data/stackstorm/files-repository 
 **Step 3b:** From within the StackStorm container, backup API key hashes from within the StackStorm container.
 
 
@@ -139,6 +139,6 @@ To Store outside the container
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NjMzODg2MywxMTM2NTA2NzE0LC0xNT
-g3OTM4NDk0LC0xNzExNzM0NTU1XX0=
+eyJoaXN0b3J5IjpbLTIxMzY3NTI1MDUsMTEzNjUwNjcxNCwtMT
+U4NzkzODQ5NCwtMTcxMTczNDU1NV19
 -->
