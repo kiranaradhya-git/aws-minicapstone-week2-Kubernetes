@@ -25,9 +25,9 @@
 |Vault |2.6.1||
 |CDB |2.6.1||
 ```
-Command to upgrade 
+Command to upgrade Vault
 ```
-
+kuectl desc deployment 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Mzg4NzY2MzZdfQ==
+eyJoaXN0b3J5IjpbMTc4MTUwMTU3NF19
 -->
