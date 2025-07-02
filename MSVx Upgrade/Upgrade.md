@@ -65,9 +65,11 @@ Log in to the web Console
 ```
 cd /root/pb_pod_setup-2.6.1
 ```
-
+```s
 cp /root/pb_pod_setup-2.5.1/containers_versions.json
 ```
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI2OTk1OTM0LC0xNzExNzM0NTU1XX0=
+eyJoaXN0b3J5IjpbNzA3OTU4NDc3LC0xNzExNzM0NTU1XX0=
 -->
