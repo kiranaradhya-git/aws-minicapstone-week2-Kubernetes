@@ -75,12 +75,20 @@ cd /root/pb_pod_setup-2.6.1/docker/services
 copy the file which were downloaded above
 
 
-Run eh
+Run the following command
+
+```
+cd /root/pb_pod_setup-2.6.1/
+./container_deploy.sh -o vault -s 
+```
+
+
+
+
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjYyODc2MzUsLTE3MTE3MzQ1NTVdfQ
-==
+eyJoaXN0b3J5IjpbODI1NjA1MjMwLC0xNzExNzM0NTU1XX0=
 -->
