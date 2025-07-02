@@ -42,7 +42,11 @@ Command to upgrade CDB
 ```
 
 ### Testing the upgrade
-kuectl desc deployment  /vault -n vault
+```
+kuectl desc deployment  /cdb -n cdb
+```
+
+Log in to the web Console
 
 ## MSVx 2.6.1 Vault and CDB
 
@@ -57,5 +61,5 @@ kuectl desc deployment  /vault -n vault
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQwOTYxNzAzXX0=
+eyJoaXN0b3J5IjpbLTE3MTE3MzQ1NTVdfQ==
 -->
