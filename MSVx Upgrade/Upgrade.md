@@ -72,11 +72,15 @@ cp /root/pb_pod_setup-2.5.1/containers_versions.json
 ```
 cd /root/pb_pod_setup-2.6.1/docker/services
 ```
+copy the file which were downloaded above
 
+
+Run eh
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2ODc5NDgwMywtMTcxMTczNDU1NV19
+eyJoaXN0b3J5IjpbLTIwMjYyODc2MzUsLTE3MTE3MzQ1NTVdfQ
+==
 -->
