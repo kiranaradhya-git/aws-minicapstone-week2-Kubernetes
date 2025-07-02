@@ -104,15 +104,20 @@ cd /root/pb_pod_setup-2.6.1/
 
 ### Testing the upgrade
 ```
-kubectl get pods
+kubectl get pods cdb
 kuectl describe deployment  /cdb -n cdb
 ```
 
 Log in to the web Console
 
 
+## Upgrading Stackstorm
+
+### 
+
+#### Pre-Requisite
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTExMzc1MDc3LC0xNzExNzM0NTU1XX0=
+eyJoaXN0b3J5IjpbMzQ5NTE3NDM2LC0xNzExNzM0NTU1XX0=
 -->
