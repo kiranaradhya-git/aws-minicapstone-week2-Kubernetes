@@ -50,6 +50,11 @@ Log in to the web Console
 
 ## MSVx 2.6.1 Vault and CDB
 
+|Component   | Release | POD Version|
+|---|---|---|
+|Vault |2.6.1||
+|CDB |2.6.1|0.96|
+
 ### Pre-Requisites 
 - CDB Not Much difference from earlier versions
 
@@ -82,7 +87,10 @@ cd /root/pb_pod_setup-2.6.1/
 ./container_deploy.sh -o vault -s 
 ```
 
+### Testing the upgrade
+kuectl desc deployment  /vault -n vault
 
+Log in to the web Console
 
 
 
@@ -90,5 +98,5 @@ cd /root/pb_pod_setup-2.6.1/
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI1NjA1MjMwLC0xNzExNzM0NTU1XX0=
+eyJoaXN0b3J5IjpbMjMxNzY0MzQwLC0xNzExNzM0NTU1XX0=
 -->
