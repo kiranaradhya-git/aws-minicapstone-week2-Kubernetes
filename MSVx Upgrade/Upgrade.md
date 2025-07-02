@@ -113,9 +113,13 @@ Log in to the web Console
 
 ## Upgrading Stackstorm 2.2 to 2.6.1
 
+- No need to keep logs and mango up
+
 ### 
 
 #### Pre-Requisites
+
+
 
 #### Upgrading
 
@@ -127,5 +131,5 @@ Log in to the web Console
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNDQ3MjAzLC0xNzExNzM0NTU1XX0=
+eyJoaXN0b3J5IjpbMTM4NDU0MzA2LC0xNzExNzM0NTU1XX0=
 -->
