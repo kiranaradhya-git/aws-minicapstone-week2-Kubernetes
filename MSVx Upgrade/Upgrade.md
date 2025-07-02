@@ -149,14 +149,20 @@ cd /root/pb_pod_setup-2.6.1/
 ./container_deploy.sh -o stackstorm -s 
 ```
 #### Testing
+Login to console to get a new password 
+```
 
+getStackstormPassword
+```
+
+Login to Web Console
 #### Customization
 
 ### Testing
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NTQ2OTk4NSwtNzM4MTcwNzE2LC03OD
-Y1NjA1NjAsMTIyODQ4Mjg0NywxMTM2NTA2NzE0LC0xNTg3OTM4
-NDk0LC0xNzExNzM0NTU1XX0=
+eyJoaXN0b3J5IjpbNTA2MjExMDA4LC0zNDU0Njk5ODUsLTczOD
+E3MDcxNiwtNzg2NTYwNTYwLDEyMjg0ODI4NDcsMTEzNjUwNjcx
+NCwtMTU4NzkzODQ5NCwtMTcxMTczNDU1NV19
 -->
