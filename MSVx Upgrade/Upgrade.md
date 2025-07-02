@@ -121,7 +121,7 @@ NOTE: Current version is 3.5 (MSVx 2.2) and
 ### Upgrading Stackstorm 2.2 to 2.
 
 #### Pre-Requisites (From above Link)
-
+- Take Snapshot
 **Step 3:**  Log on to the StackStorm node to preserve data.
 To Store outside the container 
 Path inside container "/opt/stackstorm/files-repository"
@@ -139,6 +139,6 @@ Path outside the container "/docker/data/stackstorm/files-repository"
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5NjI1OTU1NSwxMTM2NTA2NzE0LC0xNT
-g3OTM4NDk0LC0xNzExNzM0NTU1XX0=
+eyJoaXN0b3J5IjpbLTE5ODA4OTEzOTksMTEzNjUwNjcxNCwtMT
+U4NzkzODQ5NCwtMTcxMTczNDU1NV19
 -->
