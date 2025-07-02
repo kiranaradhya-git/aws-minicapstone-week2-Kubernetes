@@ -53,7 +53,7 @@ Log in to the web Console
 ### Pre-Requisites 
 - CDB Not Much difference from earlier versions
 
-**Download the form GitHub archive
+** Download the form GitHub archive
 
  
 [https://github.dxc.com/SR2/cdb/archive/refs/tags/v2.6.1.tar.gz](https://github.dxc.com/SR2/cdb/archive/refs/tags/v2.6.1.tar.gz "https://github.dxc.com/sr2/cdb/archive/refs/tags/v2.6.1.tar.gz")
@@ -62,7 +62,12 @@ Log in to the web Console
 [https://github.dxc.com/SR2/vault_consul_container/archive/refs/tags/v2.6.1.tar.gz](https://github.dxc.com/SR2/vault_consul_container/archive/refs/tags/v2.6.1.tar.gz "https://github.dxc.com/sr2/vault_consul_container/archive/refs/tags/v2.6.1.tar.gz")
 
 
+```
+cd /root/pb_pod_setup-2.6.1
+```
 
+cp /root/pb_pod_setup-2.5.1/containers_versions.json
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MDU4MTUxMiwtMTcxMTczNDU1NV19
+eyJoaXN0b3J5IjpbNDI2OTk1OTM0LC0xNzExNzM0NTU1XX0=
 -->
