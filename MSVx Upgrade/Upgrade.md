@@ -50,7 +50,7 @@ Log in to the web Console
 
 ## MSVx 2.6.1 Vault and CDB
 
-- New Feature 
+- New Feature to enable MFSA
 
 |Component   | Release | POD Version|
 |---|---|---|
@@ -111,5 +111,6 @@ Log in to the web Console
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5MTAxNDMwOCwtMTcxMTczNDU1NV19
+eyJoaXN0b3J5IjpbLTEzNzM5MjQyOTEsLTE3MTE3MzQ1NTVdfQ
+==
 -->
