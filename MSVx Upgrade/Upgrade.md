@@ -4,8 +4,7 @@
 
 ## MSVx 2.5.1 Vault and CDB
 
-- Consul is removed, and only Vault is used
-- CDB Not Much difference from earlier versions
+
 
 [https://github.dxc.com/SR2/vault_consul_container/archive/refs/tags/v2.5.1.tar.gz](https://github.dxc.com/SR2/vault_consul_container/archive/refs/tags/v2.5.1.tar.gz "https://github.dxc.com/sr2/vault_consul_container/archive/refs/tags/v2.5.1.tar.gz")
 
@@ -16,6 +15,9 @@
 
 ## MSVx 2.6.1 Vault and CDB
 
+- Consul is removed, and only Vault is used
+- CDB Not Much difference from earlier versions
+- 
 [https://github.dxc.com/SR2/cdb/archive/refs/tags/v2.6.1.tar.gz](https://github.dxc.com/SR2/cdb/archive/refs/tags/v2.6.1.tar.gz "https://github.dxc.com/sr2/cdb/archive/refs/tags/v2.6.1.tar.gz")
 
 
@@ -30,7 +32,9 @@ Command to upgrade Vault
 ### Testing the upgrade
 kuectl desc deployment  /vault -n vault
 
-Login to 
+Log in to the web Console
+
+delete deployment  consul -n vault
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDkyODc2NTddfQ==
+eyJoaXN0b3J5IjpbLTEzNjY2MDEyNzddfQ==
 -->
