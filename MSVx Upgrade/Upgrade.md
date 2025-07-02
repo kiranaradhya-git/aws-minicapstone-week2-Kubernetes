@@ -112,7 +112,7 @@ Log in to the web Console
 
 
 ## Upgrading Stackstorm 2.2 to 2.6.1
-[StackStorm 3.7 Migration - Managed Multicloud Services 2.6](https://github.dxc.com/pages/msvx/Documentation-2.6/Engineering/Components/Stackstorm/Migration_to_37/)
+Reference : [StackStorm 3.7 Migration - Managed Multicloud Services 2.6](https://github.dxc.com/pages/msvx/Documentation-2.6/Engineering/Components/Stackstorm/Migration_to_37/)
 
 - No need to keep logs, and mango refresh is not required
 
@@ -132,6 +132,6 @@ Log in to the web Console
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNTI0MjY4OSwtMTU4NzkzODQ5NCwtMT
-cxMTczNDU1NV19
+eyJoaXN0b3J5IjpbLTExMjU4NzY5MzIsLTE1ODc5Mzg0OTQsLT
+E3MTE3MzQ1NTVdfQ==
 -->
