@@ -129,9 +129,9 @@ Path outside the container "/docker/data/stackstorm/files-repository"
 - **Step 3b:** From within the StackStorm container, backup API key hashes from within the StackStorm container.
 
 
-#### Upgrading
+#### Upgrading ( Since Logs are not required its like fresh installatio
 
--  Not keeping the 
+-  Not keeping the history  and hence mangodb upgrade is not needed   
 - delete the stackstorm container
 - 
 
@@ -143,6 +143,6 @@ Path outside the container "/docker/data/stackstorm/files-repository"
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc1ODk1OTMzLDEyMjg0ODI4NDcsMTEzNj
-UwNjcxNCwtMTU4NzkzODQ5NCwtMTcxMTczNDU1NV19
+eyJoaXN0b3J5IjpbMTc5OTQyNDcyMSwxMjI4NDgyODQ3LDExMz
+Y1MDY3MTQsLTE1ODc5Mzg0OTQsLTE3MTE3MzQ1NTVdfQ==
 -->
