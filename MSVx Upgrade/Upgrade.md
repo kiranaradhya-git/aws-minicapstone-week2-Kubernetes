@@ -50,6 +50,8 @@ Log in to the web Console
 
 ## MSVx 2.6.1 Vault and CDB
 
+- New Feature 
+
 |Component   | Release | POD Version|
 |---|---|---|
 |Vault |2.6.1|12.11|
@@ -97,17 +99,17 @@ Run the following command
 
 ```
 cd /root/pb_pod_setup-2.6.1/
-./container_deploy.sh -o vault -s 
+./container_deploy.sh -o cdb_part1 -s 
 ```
 
 ### Testing the upgrade
-kuectl desc deployment  /vault -n vault
+kuectl desc deployment  /cdb -n cdb
 
-Log in to the web Consol
+Log in to the web Console
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxOTQ2NzI1MiwtMTcxMTczNDU1NV19
+eyJoaXN0b3J5IjpbLTc5MTAxNDMwOCwtMTcxMTczNDU1NV19
 -->
