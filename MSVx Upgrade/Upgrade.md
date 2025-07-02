@@ -28,7 +28,7 @@
 |Vault |2.6.1|0.1.0|
 |CDB |2.6.1|0.96|
 
-##  upgrade Vault
+##  Upgrade Vault
 ```
 Command to upgrade Vault
 ```
@@ -42,6 +42,14 @@ Log in to the web Console
 kubectl delete deployment  consul -n vault
 ```
 ##  Upgrade CDB
+
+```
+cd /root/pb_pod_setup-2.5.1
+```
+
+```
+Command to upgrade Vault
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMDY2NDc4NV19
+eyJoaXN0b3J5IjpbMTA5MzkyNDUxOV19
 -->
