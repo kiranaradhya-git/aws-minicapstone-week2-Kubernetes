@@ -55,7 +55,7 @@ Log in to the web Console
 |Component   | Release | POD Version| Port|
 |---|---|---|---|
 |Vault |2.6.1|0.1.3|8200|
-|CDB |2.6.1|1.0.100| |
+|CDB |2.6.1|1.0.100|30820 |
 
 ### Pre-Requisites 
 - CDB Not Much difference from earlier versions
@@ -116,6 +116,8 @@ Reference : [StackStorm 3.7 Migration - Managed Multicloud Services 2.6](https:/
 
 - No need to keep logs, and mango refresh is not required
 
+NOTE : Current version is 3.5 (MSVx 2.2) and its 
+
 ### Upgrading Stackstorm 2.2 to 2.
 
 #### Pre-Requisites
@@ -132,6 +134,6 @@ Reference : [StackStorm 3.7 Migration - Managed Multicloud Services 2.6](https:/
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjU4NzY5MzIsLTE1ODc5Mzg0OTQsLT
-E3MTE3MzQ1NTVdfQ==
+eyJoaXN0b3J5IjpbMTA3MDk4MDU4MCwtMTU4NzkzODQ5NCwtMT
+cxMTczNDU1NV19
 -->
