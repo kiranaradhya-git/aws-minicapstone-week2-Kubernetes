@@ -2,7 +2,7 @@
 - Vault much changes
 - CDB support new features and these need to be added manually, reference upgrade guide
 
-## MSVx 2.5.1 Vault and CDB
+## MSVx 2.5.1 Vault and CDB - 30 mins
 
 ### Pre-Requisites 
 
@@ -48,7 +48,7 @@ kuectl desc deployment  /cdb -n cdb
 
 Log in to the web Console
 
-## MSVx 2.6.1 Vault and CDB
+## MSVx 2.6.1 Vault and CDB - 15 Mins
 
 - New Feature to enable MFSA
 
@@ -105,7 +105,8 @@ cd /root/pb_pod_setup-2.6.1/
 ### Testing the upgrade
 ```
 kubectl get pods
-kuectl describe deployment  /cdb -n cdb`
+kuectl describe deployment  /cdb -n cdb
+```
 
 Log in to the web Console
 
@@ -113,5 +114,5 @@ Log in to the web Console
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMTU2MTMwNCwtMTcxMTczNDU1NV19
+eyJoaXN0b3J5IjpbMTk1ODMxMzIwMSwtMTcxMTczNDU1NV19
 -->
