@@ -55,7 +55,7 @@ Log in to the web Console
 |Component   | Release | POD Version|
 |---|---|---|
 |Vault |2.6.1|12.11|
-|CDB |2.6.1|0.96|
+|CDB |2.6.1|1.0.100|
 
 ### Pre-Requisites 
 - CDB Not Much difference from earlier versions
@@ -103,7 +103,9 @@ cd /root/pb_pod_setup-2.6.1/
 ```
 
 ### Testing the upgrade
-kuectl desc deployment  /cdb -n cdb
+```
+kubectl get pods
+kuectl describe deployment  /cdb -n cdb`
 
 Log in to the web Console
 
@@ -111,6 +113,5 @@ Log in to the web Console
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzM5MjQyOTEsLTE3MTE3MzQ1NTVdfQ
-==
+eyJoaXN0b3J5IjpbLTUyMTU2MTMwNCwtMTcxMTczNDU1NV19
 -->
