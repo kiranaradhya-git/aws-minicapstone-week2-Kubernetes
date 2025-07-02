@@ -113,7 +113,7 @@ Log in to the web Console
 
 ## Upgrading Stackstorm 2.2 to 2.6.1
 
-- No need to keep logs and mango up
+- No need to keep logs, and mango refresh is not required
 
 ### 
 
@@ -131,5 +131,6 @@ Log in to the web Console
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NDU0MzA2LC0xNzExNzM0NTU1XX0=
+eyJoaXN0b3J5IjpbLTE1ODc5Mzg0OTQsLTE3MTE3MzQ1NTVdfQ
+==
 -->
