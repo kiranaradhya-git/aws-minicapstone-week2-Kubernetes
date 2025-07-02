@@ -4,24 +4,14 @@
 
 ## MSVx 2.5.1 Vault and CDB
 
+### Pre-Requisites 
 
-
+**Download the form GitHub archive
 [https://github.dxc.com/SR2/vault_consul_container/archive/refs/tags/v2.5.1.tar.gz](https://github.dxc.com/SR2/vault_consul_container/archive/refs/tags/v2.5.1.tar.gz "https://github.dxc.com/sr2/vault_consul_container/archive/refs/tags/v2.5.1.tar.gz")
 
 
 
 [https://github.dxc.com/SR2/cdb/archive/refs/tags/v2.5.1.tar.gz](https://github.dxc.com/SR2/cdb/archive/refs/tags/v2.5.1.tar.gz "https://github.dxc.com/sr2/cdb/archive/refs/tags/v2.5.1.tar.gz")
-
-
-## MSVx 2.6.1 Vault and CDB
-
-- Consul is removed, and only Vault is used
-- CDB Not Much difference from earlier versions
-- 
-[https://github.dxc.com/SR2/cdb/archive/refs/tags/v2.6.1.tar.gz](https://github.dxc.com/SR2/cdb/archive/refs/tags/v2.6.1.tar.gz "https://github.dxc.com/sr2/cdb/archive/refs/tags/v2.6.1.tar.gz")
-
-
-[https://github.dxc.com/SR2/vault_consul_container/archive/refs/tags/v2.6.1.tar.gz](https://github.dxc.com/SR2/vault_consul_container/archive/refs/tags/v2.6.1.tar.gz "https://github.dxc.com/sr2/vault_consul_container/archive/refs/tags/v2.6.1.tar.gz")
 
 |Component   | Release | POD Version|
 |---|---|---|
@@ -50,6 +40,20 @@ cd /root/pb_pod_setup-2.5.1
 ```
 Command to upgrade Vault
 ```
+
+
+## MSVx 2.6.1 Vault and CDB
+
+- Consul is removed, and only Vault is used
+- CDB Not Much difference from earlier versions
+- 
+[https://github.dxc.com/SR2/cdb/archive/refs/tags/v2.6.1.tar.gz](https://github.dxc.com/SR2/cdb/archive/refs/tags/v2.6.1.tar.gz "https://github.dxc.com/sr2/cdb/archive/refs/tags/v2.6.1.tar.gz")
+
+
+[https://github.dxc.com/SR2/vault_consul_container/archive/refs/tags/v2.6.1.tar.gz](https://github.dxc.com/SR2/vault_consul_container/archive/refs/tags/v2.6.1.tar.gz "https://github.dxc.com/sr2/vault_consul_container/archive/refs/tags/v2.6.1.tar.gz")
+
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5MzkyNDUxOV19
+eyJoaXN0b3J5IjpbLTE5MTI2OTE4MjBdfQ==
 -->
