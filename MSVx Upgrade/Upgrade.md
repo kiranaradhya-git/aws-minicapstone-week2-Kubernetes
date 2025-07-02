@@ -116,12 +116,16 @@ Reference : [StackStorm 3.7 Migration - Managed Multicloud Services 2.6](https:/
 
 - No need to keep logs, and mango refresh is not required
 
-NOTE : Current version is 3.5 (MSVx 2.2) and its 
+NOTE: Current version is 3.5 (MSVx 2.2) and  
 
 ### Upgrading Stackstorm 2.2 to 2.
 
 #### Pre-Requisites
 
+**Step 3:**  Log on to the StackStorm node to preserve data.
+**Step 3b:**
+
+From within the StackStorm container, backup API key hashes from within the StackStorm container.
 
 
 #### Upgrading
@@ -134,6 +138,6 @@ NOTE : Current version is 3.5 (MSVx 2.2) and its
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MDk4MDU4MCwtMTU4NzkzODQ5NCwtMT
+eyJoaXN0b3J5IjpbLTE4MDE0NzMzNiwtMTU4NzkzODQ5NCwtMT
 cxMTczNDU1NV19
 -->
