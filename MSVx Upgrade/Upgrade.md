@@ -22,12 +22,15 @@
 [https://github.dxc.com/SR2/vault_consul_container/archive/refs/tags/v2.6.1.tar.gz](https://github.dxc.com/SR2/vault_consul_container/archive/refs/tags/v2.6.1.tar.gz "https://github.dxc.com/sr2/vault_consul_container/archive/refs/tags/v2.6.1.tar.gz")
 
 |Component   | Release | POD Version|
-|Vault |2.6.1||
+|Vault |2.6.1|0.1.0|
 |CDB |2.6.1||
 ```
 Command to upgrade Vault
 ```
-kuectl desc deployment 
+### Testing the upgrade
+kuectl desc deployment  /vault -n vault
+
+Login to 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MTUwMTU3NF19
+eyJoaXN0b3J5IjpbLTEzMDkyODc2NTddfQ==
 -->
