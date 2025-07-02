@@ -52,7 +52,7 @@ Log in to the web Console
 
 |Component   | Release | POD Version|
 |---|---|---|
-|Vault |2.6.1||
+|Vault |2.6.1|12.11|
 |CDB |2.6.1|0.96|
 
 ### Pre-Requisites 
@@ -92,11 +92,22 @@ kuectl desc deployment  /vault -n vault
 
 Log in to the web Console
 
+### Upgrading CDB
+Run the following command
 
+```
+cd /root/pb_pod_setup-2.6.1/
+./container_deploy.sh -o vault -s 
+```
+
+### Testing the upgrade
+kuectl desc deployment  /vault -n vault
+
+Log in to the web Consol
 
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjMxNzY0MzQwLC0xNzExNzM0NTU1XX0=
+eyJoaXN0b3J5IjpbMTIxOTQ2NzI1MiwtMTcxMTczNDU1NV19
 -->
