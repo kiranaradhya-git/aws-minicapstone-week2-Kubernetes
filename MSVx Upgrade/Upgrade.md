@@ -139,11 +139,14 @@ Path outside the container "/docker/data/stackstorm/files-repository"
 
 -  Not keeping the history  and hence mangodb upgrade is not needed   
 - delete the stackstorm container
-- 
+-  
 
 ### From Ansible Node
 
-
+```
+cd /root/pb_pod_setup-2.6.1/
+./container_deploy.sh -o stackstorm -s 
+```
 #### Testing
 
 #### Customization
@@ -152,7 +155,7 @@ Path outside the container "/docker/data/stackstorm/files-repository"
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczODE3MDcxNiwtNzg2NTYwNTYwLDEyMj
-g0ODI4NDcsMTEzNjUwNjcxNCwtMTU4NzkzODQ5NCwtMTcxMTcz
-NDU1NV19
+eyJoaXN0b3J5IjpbLTc2NjE4MTU2MiwtNzM4MTcwNzE2LC03OD
+Y1NjA1NjAsMTIyODQ4Mjg0NywxMTM2NTA2NzE0LC0xNTg3OTM4
+NDk0LC0xNzExNzM0NTU1XX0=
 -->
