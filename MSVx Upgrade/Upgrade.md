@@ -21,6 +21,10 @@
 
 [https://github.dxc.com/SR2/vault_consul_container/archive/refs/tags/v2.6.1.tar.gz](https://github.dxc.com/SR2/vault_consul_container/archive/refs/tags/v2.6.1.tar.gz "https://github.dxc.com/sr2/vault_consul_container/archive/refs/tags/v2.6.1.tar.gz")
 
+|Component   | Release | POD Version|
+|Vault |||
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU1OTgzODZdfQ==
+eyJoaXN0b3J5IjpbMTIyNjI1NDgxOV19
 -->
