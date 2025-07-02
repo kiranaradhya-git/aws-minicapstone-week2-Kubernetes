@@ -52,10 +52,10 @@ Log in to the web Console
 
 - New Feature to enable MFSA
 
-|Component   | Release | POD Version|
-|---|---|---|
-|Vault |2.6.1|0.1.3|
-|CDB |2.6.1|1.0.100|
+|Component   | Release | POD Version| Port|
+|---|---|---|---|
+|Vault |2.6.1|0.1.3|8200|
+|CDB |2.6.1|1.0.100| |
 
 ### Pre-Requisites 
 - CDB Not Much difference from earlier versions
@@ -111,7 +111,7 @@ kuectl describe deployment  /cdb -n cdb
 Log in to the web Console
 
 
-## Upgrading Stackstorm
+## Upgrading Stackstorm 2.2 to 2.6.1
 
 ### 
 
@@ -127,5 +127,5 @@ Log in to the web Console
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxMDIyMDQyOSwtMTcxMTczNDU1NV19
+eyJoaXN0b3J5IjpbMTUzNDQ3MjAzLC0xNzExNzM0NTU1XX0=
 -->
