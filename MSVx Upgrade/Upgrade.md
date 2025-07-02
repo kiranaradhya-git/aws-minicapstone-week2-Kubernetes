@@ -50,9 +50,12 @@ Log in to the web Console
 
 ## MSVx 2.6.1 Vault and CDB
 
-- Consul is removed, and only Vault is used
+### Pre-Requisites 
 - CDB Not Much difference from earlier versions
-- 
+
+**Download the form GitHub archive
+
+ 
 [https://github.dxc.com/SR2/cdb/archive/refs/tags/v2.6.1.tar.gz](https://github.dxc.com/SR2/cdb/archive/refs/tags/v2.6.1.tar.gz "https://github.dxc.com/sr2/cdb/archive/refs/tags/v2.6.1.tar.gz")
 
 
@@ -61,5 +64,5 @@ Log in to the web Console
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTE3MzQ1NTVdfQ==
+eyJoaXN0b3J5IjpbMjA5MDU4MTUxMiwtMTcxMTczNDU1NV19
 -->
