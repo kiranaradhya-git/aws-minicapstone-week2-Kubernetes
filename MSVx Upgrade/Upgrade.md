@@ -34,7 +34,11 @@ kuectl desc deployment  /vault -n vault
 
 Log in to the web Console
 
-delete deployment  consul -n vault
+### Deleting the consul POD which is no longer required
+```
+kubectl delete deployment  consul -n vault
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjY2MDEyNzddfQ==
+eyJoaXN0b3J5IjpbNzEzNDkwNzIyXX0=
 -->
