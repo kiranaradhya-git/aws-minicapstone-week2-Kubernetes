@@ -133,6 +133,7 @@ To Store outside the container
 Path inside container "/opt/stackstorm/files-repository"
 Path outside the container "/docker/data/stackstorm/files-repository"
 - **Step 3b:** From within the StackStorm container, backup API key hashes from within the StackStorm container.
+- Fix Python issue on stackstorm node
 
 
 #### Upgrading ( Since Logs are not required its like fresh installation not upgrade)
@@ -155,7 +156,7 @@ cd /root/pb_pod_setup-2.6.1/
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2NjE4MTU2MiwtNzM4MTcwNzE2LC03OD
+eyJoaXN0b3J5IjpbLTM0NTQ2OTk4NSwtNzM4MTcwNzE2LC03OD
 Y1NjA1NjAsMTIyODQ4Mjg0NywxMTM2NTA2NzE0LC0xNTg3OTM4
 NDk0LC0xNzExNzM0NTU1XX0=
 -->
